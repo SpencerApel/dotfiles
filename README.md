@@ -1,13 +1,13 @@
 # Arch Linux Configuration Files
 
 ## Important Packages
-- zsh
+- zsh (Added soon, weird issue with "being hidden")
 - bspwm
 - sxhkd
 - polybar
 - [st](https://github.com/SpencerApel/st)
 - picom
-- vim
+- vim (Added soon, weird issue with "being hidden")
 
 ## Scripts
 All are added to PATH, to check out more scripts, go [here](https://github.com/SpencerApel/Scripts)
