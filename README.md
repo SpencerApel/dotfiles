@@ -18,4 +18,4 @@ Thanks to [LukeSmithxyz](https://github.com/LukeSmithxyz) for some of the script
 - dmenupass (Used for 'sudo -A' or ASKPASS variable)
 - prompt (Used in many sxhkd bindings)
 
-## Total Package List [here](https://github.com/SpencerApel/dotfiles/blob/master/pkglist)
+## Total Package List [here](https://github.com/SpencerApel/dotfiles/blob/master/pkglist.txt)
