@@ -1,0 +1,11 @@
+# Change ls to lsd
+alias ls='lsd -A --color=auto'
+
+# Edit todo list from anywhere
+alias todo='vim ~/Documents/TODO'
+
+# cd into school folder
+alias school='cd ~/Documents/School/Junior\ Year/Spring\ 2020/;ls'
+
+#Prints packages installed (not from base, base-devel, xorg or dependencies)
+alias lspkg='comm -23 <(pacman -Qqt | sort) <(pacman -Sqg base-base-devel | sort) | grep -v xorg'
