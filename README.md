@@ -5,7 +5,7 @@
 - bspwm
 - sxhkd
 - polybar
-- [st](www.github.com/SpencerApel/st)
+- [st](https://github.com/SpencerApel/st)
 - picom
 - vim
 
