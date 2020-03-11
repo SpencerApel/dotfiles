@@ -1,0 +1,65 @@
+# Simple X Hotkey Daemon
+
+# ----------------------------------------------------------
+# Basic bindings
+# ----------------------------------------------------------
+
+super + Return
+    st
+
+super + r
+    dmenu_run
+
+super + b
+    brave
+
+super + shift + d
+    displayselect
+
+# ----------------------------------------------------------
+# Reboot/Shutdown/Hibernate/Kill
+# ----------------------------------------------------------
+
+super + control + Escape
+    prompt "Are you sure you want to exit bspwm?" "bspc quit"
+
+super + control + r
+    prompt "Reboot computer?" "sudo -A reboot"
+
+super + control + s
+    prompt "Shutdown computer?" "sudo -A shutdown -h now"
+
+#super + control + h
+#    prompt "Hibernate computer?" "sudo -A zzz"
+
+# ----------------------------------------------------------
+# bspwm bindings
+# ----------------------------------------------------------
+
+# restart bspwm
+super + control + w
+    bspc wm -r
+
+# kill the focused window
+super + shift + x
+    bspc node focused -c
+
+# change between workspaces/desktops
+super + {0-9}
+    bspc desktop -f {0-9}
+
+# send window to workspace/desktop
+super + shift + {0-9}
+    bspc node -d {0-9}
+
+# focus on window in direction
+super + {h,j,k,l}
+    bspc node -f {west,south,north,east}
+
+# swap window in direction
+super + shift + {h,j,k,l}
+    bspc node -s {west,south,north,east}
+
+# toggle floating
+super + space
+    bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
