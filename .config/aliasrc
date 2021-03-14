@@ -1,11 +1,18 @@
 # Change ls to lsd
-alias ls='lsd -A --color=auto'
+alias ls='lsd -A --color=auto --group-dirs=first'
 
 # Edit todo list from anywhere
 alias todo='vim ~/Documents/TODO'
 
-# cd into school folder
-alias school='cd ~/Documents/School/Junior\ Year/Spring\ 2020/;ls'
-
-#Prints packages installed (not from base, base-devel, xorg or dependencies)
+# Prints packages installed (not from base, base-devel, xorg or dependencies)
 alias lspkg='comm -23 <(pacman -Qqt | sort) <(pacman -Sqg base-base-devel | sort) | grep -v xorg'
+
+# Get rid of the pesky wget-hsts file from the home dir
+alias wget='wget --hsts-file="$HOME/.cache/wget-hsts"'
+
+# List name of fonts (actual names for configs)
+alias lsfont='fc-list | cut -f2- -d ':' | grep -v Adobe | grep -v "B&H"'
+
+# Alias nvim to vim
+alias vim='nvim'
+alias v='nvim'
