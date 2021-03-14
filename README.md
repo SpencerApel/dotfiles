@@ -23,4 +23,4 @@ Thanks to [LukeSmithxyz](https://github.com/LukeSmithxyz) for some of the script
 - dmenu_run_i (dmenu run launcher, with option to run program with '!' before name)
 - al-wpa-setup (wifi setup for Arch Linux ARM)
 
-## Alias' [here](https://github.com/SpencerApel/dotfiles/blob/master/.config/aliasrc)
+#### [Aliases](https://github.com/SpencerApel/dotfiles/blob/master/.config/aliasrc)
