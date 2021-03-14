@@ -7,22 +7,28 @@ bspc rule -r "*"
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
 # Autostart programs
-picom -b &
-killall "nm-applet" # if config is reloaded, kill programs that can have more than one instance
-nm-applet &
-killall "volumeicon"
-volumeicon &
-feh --bg-fill --no-fehbg ~/Documents/img.jpg &
+pgrep -x 'picom -b' || picom -b &
+pgrep -x 'nm-applet' || nm-applet &
+pgrep -x 'volumeicon' || volumeicon &
+xwallpaper --zoom ~/Documents/Pictures/wallpaper.jpg &
 
 # Start polybar
-$HOME/.config/polybar/launch.sh
+pgrep -x polybar || $HOME/.config/polybar/launch.sh
+
+# Start pidswallow
+pgrep -fl 'pidswallow -gl' || pidswallow -gl
+# Let bspwm handle window hiding for pidswallow
+# bspwm will remember window positions and not lose track of swallowed windows
+export PIDSWALLOW_SWALLOW_COMMAND='bspc node $pwid --flag hidden=on'
+export PIDSWALLOW_VOMIT_COMMAND='bspc node $pwid --flag hidden=off'
+# Checks is parent window is floating and will apply the same to the child window for pidswallow
+export PIDSWALLOW_PREGLUE_HOOK='bspc query -N -n $pwid.floating >/dev/null && bspc node $cwid --state floating'
 
 # General configuration
 bspc config border_width         2         # width of border around window
 bspc config focused_border_color "#82aaff" # color of border of focused window
 bspc config window_gap           8         # gap between each window
 bspc config top_padding         20         # for a status bar
-bspc config focus_follows_pointer true     # change focus where mouse goes
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -32,3 +38,5 @@ bspc config gapless_monocle      true
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 bspc config merge_overlapping_monitors true
+
+bspc config focus_follows_pointer true     # change focus where mouse goes
