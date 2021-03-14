@@ -1,13 +1,15 @@
 # Arch Linux Configuration Files
 
 ## Important Packages
-- zsh (Added soon, weird issue with "being hidden")
+- zsh
 - bspwm
 - sxhkd
 - polybar
 - [st](https://github.com/SpencerApel/st)
 - picom
-- vim (Added soon, weird issue with "being hidden")
+- nvim (just init.vim)
+- X11
+- neofetch
 
 ## Scripts
 All are added to PATH, to check out more scripts, go [here](https://github.com/SpencerApel/Scripts)
@@ -17,5 +19,8 @@ Thanks to [LukeSmithxyz](https://github.com/LukeSmithxyz) for some of the script
 - displayselect (Choose multi-monitor setup, or one display)
 - dmenupass (Used for 'sudo -A' or ASKPASS variable)
 - prompt (Used in many sxhkd bindings)
+- pidswallow (Used for window swallowing, lines added in bspwmrc)
+- dmenu_run_i (dmenu run launcher, with option to run program with '!' before name)
+- al-wpa-setup (wifi setup for Arch Linux ARM)
 
-## Total Package List [here](https://github.com/SpencerApel/dotfiles/blob/master/pkglist.txt)
+## Alias' [here](https://github.com/SpencerApel/dotfiles/blob/master/.config/aliasrc)
