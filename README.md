@@ -20,7 +20,7 @@ Thanks to [LukeSmithxyz](https://github.com/LukeSmithxyz) for some of the script
 - dmenupass (Used for 'sudo -A' or ASKPASS variable)
 - prompt (Used in many sxhkd bindings)
 - pidswallow (Used for window swallowing, lines added in bspwmrc)
-- dmenu_run_i (dmenu run launcher, with option to run program with '!' before name)
+- dmenu_run_i (dmenu run launcher, with option to run program ex. '!htop')
 - al-wpa-setup (wifi setup for Arch Linux ARM)
 
 #### [Aliases](https://github.com/SpencerApel/dotfiles/blob/master/.config/aliasrc)
