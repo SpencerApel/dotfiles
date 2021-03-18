@@ -12,7 +12,7 @@
 - neofetch
 
 ## Scripts
-All are added to PATH, to check out more scripts, go [here](https://github.com/SpencerApel/dotfiles/.local/bin)
+All are added to PATH, to check out more scripts, go [here](https://github.com/SpencerApel/dotfiles/tree/master/.local/bin)
 
 Thanks to [LukeSmithxyz](https://github.com/LukeSmithxyz) for some of the scripts
 
