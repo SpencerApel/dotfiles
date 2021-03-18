@@ -18,8 +18,8 @@ for i in $(find . -name ".git" | cut -c 3-); do
     # finally pull
     git pull origin master --force;
 
-    # after the pull, lets make the package
-    #makepkg -si
+    # after the pull, if updated, run makepkg -si
+    #*******************************************
 
     # lets get back to the CUR_DIR
     cd ~/Documents/aur/
