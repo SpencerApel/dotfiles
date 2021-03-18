@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+# dmenu_run improved with option to run command in term
+# If a command ends with '!' then run in term
+
+term="$TERMINAL -e"
+cmd="$(dmenu_path | dmenu $@)"
+
+case $cmd in
+    *\! ) ${term} "$(printf "%s" "${cmd}" | cut -d '!' -f1)" ;;
+    * ) ${cmd} ;;
+esac
+exit
