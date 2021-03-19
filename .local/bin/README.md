@@ -3,6 +3,7 @@
 - **aur-update:** recursivly run git pull in each aur directory to update them (wip)
 - **brightdown:** decrease brightness and notify
 - **brightup:** increase brightness and notify
+- **bspresize:** resize windows in all directions for bspwm (wip, buggy for floating windows)
 - **displayselect:** script to configure display setup, multimonitor, positions, etc. using dmenu
 - **dmenu_run_term:** add a '!' after the command in dmenu to open terminal and run
 - **dmenumount:** mount android/usb devices to selected mount point using dmenu
