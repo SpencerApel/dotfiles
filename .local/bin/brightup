@@ -1,0 +1,4 @@
+#! /usr/bin/env sh
+
+light -A 10
+dunstify --replace=12 "🔆 Brightness" "$(light | cut -d '.' -f1)"
