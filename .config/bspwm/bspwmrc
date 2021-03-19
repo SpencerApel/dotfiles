@@ -7,18 +7,8 @@ bspc rule -r "*"
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
 # Autostart programs
-pgrep -x 'picom -b' || picom -b &
-pgrep -x 'nm-applet' || nm-applet &
-pgrep -x 'volumeicon' || volumeicon &
-pgrep -x 'dunst' || dunst &
-pgrep -x 'clipmenud' || clipmenud &
-xwallpaper --zoom ~/Documents/Pictures/wallpaper.jpg &
+/home/spencer/.config/autostart
 
-# Start polybar
-pgrep -x polybar || $HOME/.config/polybar/launch.sh
-
-# Start pidswallow
-pgrep -fl 'pidswallow -gl' || pidswallow -gl
 # Let bspwm handle window hiding for pidswallow
 # bspwm will remember window positions and not lose track of swallowed windows
 export PIDSWALLOW_SWALLOW_COMMAND='bspc node $pwid --flag hidden=on'
