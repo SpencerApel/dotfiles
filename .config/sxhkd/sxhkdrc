@@ -8,7 +8,7 @@ super + Return
     $TERMINAL
 
 super + r
-    dmenu_run_i
+    dmenu_run_term
 
 super + b
     $BROWSER
@@ -17,10 +17,10 @@ super + shift + d
     displayselect
 
 XF86MonBrightnessDown
-    light -U 10
+    brightdown
 
 XF86MonBrightnessUp
-    light -A 10
+    brightup
 
 # ----------------------------------------------------------
 # Reboot/Shutdown/Hibernate/Kill
