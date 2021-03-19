@@ -8,6 +8,7 @@ export PATH="$PATH:$HOME/.local/bin/"
 # Default programs
 export EDITOR="nvim"
 export TERMINAL="alacritty"
+export TERM="alacritty"
 export BROWSER="brave"
 export READER="zathura"
 export OPENER="xdg-open"
@@ -25,3 +26,9 @@ export GNUPGHOME="$HOME/.config/.gnupg"
 
 # Let pacdiff work with nvim
 export DIFFPROG="nvim -d"
+
+# Clipboard environmental variables
+export CM_SELECTIONS="clipboard"
+export CM_DEBUG=0 # set to 1 to print info to stdout
+export CM_OUTPUT_CLIP=1 # set to 1 to print copy to stdout
+export CM_MAX_CLIPS=10 # max num of copies in clipboard
