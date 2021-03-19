@@ -1,6 +1,8 @@
 ## Script descriptions:
 - **al-wpa-setup**: sets up wifi on arch linux arm\
 - **aur-update:** recursivly run git pull in each aur directory to update them (wip)\
+- **brightdown:** decrease brightness and notify\
+- **brightup:** increase brightness and notify\
 - **displayselect:** script to configure display setup, multimonitor, positions, etc. using dmenu\
 - **dmenu_run_term:** add a '!' after the command in dmenu to open terminal and run\
 - **dmenumount:** mount android/usb devices to selected mount point using dmenu\
