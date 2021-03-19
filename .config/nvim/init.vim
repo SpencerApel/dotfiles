@@ -26,7 +26,7 @@ set wildmode=longest,list,full " autocompletion in cmd line :
 set splitbelow splitright " fixes weird splitting of new window
 filetype plugin on " turn on filetype plugin so script can run
 set updatetime=100 " update every 100ms instead of every 4 sec
-set clipboard+=unnamedplus " use system clipboard instead of vim registers
+set clipboard=unnamedplus " use system clipboard instead of vim registers
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "M",
