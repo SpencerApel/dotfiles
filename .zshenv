@@ -28,7 +28,7 @@ export GNUPGHOME="$HOME/.config/.gnupg"
 export DIFFPROG="nvim -d"
 
 # Clipboard environmental variables
-export CM_SELECTIONS="clipboard"
+export CM_SELECTIONS="primary clipboard"
 export CM_DEBUG=0 # set to 1 to print debug to stdout
-export CM_OUTPUT_CLIP=1 # set to 1 to output clip to stdout
+export CM_OUTPUT_CLIP=0 # set to 1 to output clip to stdout
 export CM_MAX_CLIPS=10 # max num of copies in clipboard
