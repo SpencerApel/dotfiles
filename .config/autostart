@@ -1,0 +1,13 @@
+#! /usr/bin/env sh
+
+# Autostart programs
+
+pgrep -x polybar || $HOME/.config/polybar/launch.sh
+pgrep -x 'sxhkd' || sxhkd &
+pgrep -x 'picom -b' || picom -b &
+pgrep -x 'nm-applet' || nm-applet &
+pgrep -x 'volumeicon' || volumeicon &
+pgrep -x 'dunst' || dunst &
+pgrep -x 'clipmenud' || clipmenud &
+xwallpaper --zoom ~/Documents/Pictures/wallpaper.jpg &
+pgrep -fl 'pidswallow -gl' || pidswallow -gl
