@@ -1,0 +1,43 @@
+#! /usr/bin/env sh
+
+# Move left side of window:
+    # bspc node -z left -20 0 (EXPAND)
+    # bspc node -z left 20 0  (CONTRACT)
+
+# Move right side of window:
+    # bspc node -z right 20 0  (EXPAND)
+    # bspc node -z right -20 0 (CONTRACT)
+
+# Move bottom side of window:
+    # bspc node -z bottom 0 20  (EXPAND)
+    # bspc node -z bottom 0 -20 (CONTRACT)
+
+# Move top side of window:
+    # bspc node -z top 0 -20 (EXPAND)
+    # bspc node -z top 0 20  (CONTRACT)
+
+case $1 in
+    north)
+        # expand top side (up), contract bottom side (up)
+        bspc node -z top 0 -20 || bspc node -z bottom 0 -20
+        ;;
+    east)
+        # expand right side (out), contract left side (in)
+        bspc node -z right 20 0 || bspc node -z left 20 0
+        ;;
+    south)
+        # expand bottom side (down), contract top side (down)
+        bspc node -z bottom 0 20 || bspc node -z top 0 20
+        ;;
+    west)
+        # expand left side (out), contract right side (in)
+        bspc node -z left -20 0 || bspc node -z right -20 0
+        ;;
+esac
+
+
+
+
+
+
+
