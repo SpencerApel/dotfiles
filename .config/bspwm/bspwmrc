@@ -32,3 +32,7 @@ bspc config remove_unplugged_monitors true
 bspc config merge_overlapping_monitors true
 
 bspc config focus_follows_pointer true     # change focus where mouse goes
+
+# Zathura likes to always start in floating mode
+# setting rule to always start in tiled mode
+bspc rule -a Zathura state=tiled
