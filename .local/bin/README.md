@@ -1,13 +1,13 @@
 ## Script descriptions:
-- **al-wpa-setup**: sets up wifi on arch linux arm\
-- **aur-update:** recursivly run git pull in each aur directory to update them (wip)\
-- **brightdown:** decrease brightness and notify\
-- **brightup:** increase brightness and notify\
-- **displayselect:** script to configure display setup, multimonitor, positions, etc. using dmenu\
-- **dmenu_run_term:** add a '!' after the command in dmenu to open terminal and run\
-- **dmenumount:** mount android/usb devices to selected mount point using dmenu\
-- **dmenupass:** used for SUDO_ASKPASS env var to type password using dmenu\
-- **dmenusysfunc:** prompt to run specific system functions, like shutdown, hibernate, etc. using dmenu\
-- **dmenuumount:** unmount mount points, that are not in /etc/fstab using dmenu\
-- **extract:** script to extract many different archives\
+- **al-wpa-setup**: sets up wifi on arch linux arm
+- **aur-update:** recursivly run git pull in each aur directory to update them (wip)
+- **brightdown:** decrease brightness and notify
+- **brightup:** increase brightness and notify
+- **displayselect:** script to configure display setup, multimonitor, positions, etc. using dmenu
+- **dmenu_run_term:** add a '!' after the command in dmenu to open terminal and run
+- **dmenumount:** mount android/usb devices to selected mount point using dmenu
+- **dmenupass:** used for SUDO_ASKPASS env var to type password using dmenu
+- **dmenusysfunc:** prompt to run specific system functions, like shutdown, hibernate, etc. using dmenu
+- **dmenuumount:** unmount mount points, that are not in /etc/fstab using dmenu
+- **extract:** script to extract many different archives
 - **prompt:** yes or no prompt to be selected in dmenu
