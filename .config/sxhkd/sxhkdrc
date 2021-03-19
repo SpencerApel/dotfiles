@@ -22,6 +22,9 @@ XF86MonBrightnessDown
 XF86MonBrightnessUp
     brightup
 
+Menu
+    clipmenu # func + right ctrl
+
 # ----------------------------------------------------------
 # Reboot/Shutdown/Hibernate/Kill
 # ----------------------------------------------------------
