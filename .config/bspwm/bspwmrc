@@ -36,3 +36,6 @@ bspc config focus_follows_pointer true     # change focus where mouse goes
 # Zathura likes to always start in floating mode
 # setting rule to always start in tiled mode
 bspc rule -a Zathura state=tiled
+
+# Set all floating windows to 800x600 (manily used for brave file browser)
+bspc rule -a '*' rectangle=800x600+0+0
