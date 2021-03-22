@@ -11,4 +11,5 @@
 - **dmenusysfunc:** prompt to run specific system functions, like shutdown, hibernate, etc. using dmenu
 - **dmenuumount:** unmount mount points, that are not in /etc/fstab using dmenu
 - **extract:** script to extract many different archives
+- **lsbind:** displays key bindings and description using dmenu
 - **prompt:** yes or no prompt to be selected in dmenu
