@@ -1,40 +1,42 @@
 # Simple X Hotkey Daemon
 
-# ----------------------------------------------------------
-# Basic bindings
-# ----------------------------------------------------------
-
+# open terminal
 super + Return
     $TERMINAL
 
+# run dmenu script
 super + r
     dmenu_run_term
 
+# open browser
 super + b
     $BROWSER
 
+# binding to configure displays
 super + shift + d
     displayselect
 
+# turn down brightness
 XF86MonBrightnessDown
     brightdown
 
+# turn up brightness
 XF86MonBrightnessUp
     brightup
 
+# func + r_ctrl opens clipboard
 Menu
-    clipmenu # func + right ctrl
+    clipmenu
 
-# ----------------------------------------------------------
-# Reboot/Shutdown/Hibernate/Kill
-# ----------------------------------------------------------
-
+# quit bspwm and drop to tty
 super + control + Escape
     prompt "Are you sure you want to exit bspwm?" "bspc quit"
 
+# reboot computer
 super + control + r
     prompt "Reboot computer?" "sudo -A reboot"
 
+# shutdowm computer
 super + control + s
     prompt "Shutdown computer?" "sudo -A shutdown -h now"
 
