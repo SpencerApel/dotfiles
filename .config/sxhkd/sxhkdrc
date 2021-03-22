@@ -74,5 +74,5 @@ super + space
     bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
 
 # resize windows
-super + alt + {h,j,k,l}
-    bspresize {west,south,north,east}
+super + alt + {h,j,k,l,space}
+    bspresize {west,south,north,east,reset}
