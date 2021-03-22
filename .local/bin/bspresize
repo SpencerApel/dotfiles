@@ -33,6 +33,10 @@ case $1 in
         # expand left side (out), contract right side (in)
         bspc node -z left -20 0 || bspc node -z right -20 0
         ;;
+    reset)
+        # reset every window in the current workspace to default sizes
+        bspc node @/ -E
+        ;;
 esac
 
 
