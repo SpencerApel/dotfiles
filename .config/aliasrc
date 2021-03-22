@@ -1,5 +1,5 @@
-# Change ls to lsd
-alias ls='lsd -A --color=auto --group-dirs=first'
+# Change ls to exa
+alias ls='exa -a --color=always --group-directories-first'
 
 # Edit todo list from anywhere
 alias todo='vim ~/Documents/TODO'
@@ -16,3 +16,6 @@ alias lsfont='fc-list | cut -f2- -d ':' | grep -v Adobe | grep -v "B&H"'
 # Alias nvim to vim
 alias vim='nvim'
 alias v='nvim'
+
+# Arch meme
+alias clear='clear;neofetch'
