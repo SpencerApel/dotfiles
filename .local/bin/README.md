@@ -8,7 +8,6 @@
 - **dmenu_run_term:** add a '!' after the command in dmenu to open terminal and run
 - **dmenumount:** mount android/usb devices to selected mount point using dmenu
 - **dmenupass:** used for SUDO_ASKPASS env var to type password using dmenu
-- **dmenusysfunc:** prompt to run specific system functions, like shutdown, hibernate, etc. using dmenu
 - **dmenuumount:** unmount mount points, that are not in /etc/fstab using dmenu
 - **extract:** script to extract many different archives
 - **lsbind:** displays key bindings and description using dmenu
