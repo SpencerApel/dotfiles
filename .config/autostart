@@ -4,7 +4,7 @@
 
 pgrep -x polybar || $HOME/.config/polybar/launch.sh
 pgrep -x 'sxhkd' || sxhkd &
-pgrep -x 'picom -b' || picom -b &
+pgrep -x 'picom --experimental-backends -b' || picom --experimental-backends -b
 pgrep -x 'nm-applet' || nm-applet &
 pgrep -x 'volumeicon' || volumeicon &
 pgrep -x 'dunst' || dunst &
