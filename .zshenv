@@ -29,19 +29,17 @@ export DIFFPROG="nvim -d"
 
 # Clipboard environmental variables
 export CM_SELECTIONS="primary clipboard"
-export CM_DEBUG=0 # set to 1 to print info to stdout
-export CM_OUTPUT_CLIP=0 # set to 1 to print copy to stdout
 export CM_MAX_CLIPS=10 # max num of copies in clipboard
 
 # Colorize less for man pages
 # start blinking
-export LESS_TERMCAP_mb=$'\e[01;31m' # 01=background,31=red
+#export LESS_TERMCAP_mb=$'\e[01;31m' # 01=background,31=red
 # start bold
 export LESS_TERMCAP_md=$'\e[01;31m' # 01=background,31=red
 # start underline
 export LESS_TERMCAP_us=$'\e[01;32m' # 01=background,31=green
 # start standout
-export LESS_TERMCAP_so=$'\e[01;33m' # 01=background,33=yellow
+#export LESS_TERMCAP_so=$'\e[01;33m' # 01=background,33=yellow
 # end blinking, bold, underline, standout
 export LESS_TERMCAP_me=$'\e[0m'
 
