@@ -21,8 +21,10 @@ bspc config border_width 2                 # width of border around window
 bspc config focused_border_color "#82aaff" # color of border of focused window
 bspc config window_gap 8                   # gap between each window
 bspc config top_padding 20                 # for a status bar
+bspc config split_ratio 0.52               # set split ratio for master window
 
-bspc config split_ratio 0.52
+# When one window on screen, no gaps or borders (basically fullscreen)
+bspc config single_monocle true
 bspc config borderless_monocle true
 bspc config gapless_monocle true
 
