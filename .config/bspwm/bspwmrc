@@ -17,21 +17,24 @@ export PIDSWALLOW_VOMIT_COMMAND='bspc node $pwid --flag hidden=off'
 export PIDSWALLOW_PREGLUE_HOOK='bspc query -N -n $pwid.floating >/dev/null && bspc node $cwid --state floating'
 
 # General configuration
-bspc config border_width         2         # width of border around window
+bspc config border_width 2                 # width of border around window
 bspc config focused_border_color "#82aaff" # color of border of focused window
-bspc config window_gap           8         # gap between each window
-bspc config top_padding         20         # for a status bar
+bspc config window_gap 8                   # gap between each window
+bspc config top_padding 20                 # for a status bar
 
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+
+bspc config focus_follows_pointer true     # change focus where mouse goes
+bspc config pointer_modifier mod4          # press super (windows) key for pointer actions
+bspc config pointer_action3 resize_corner  # press super + left click to resize window from corner
+bspc config pointer_action1 move           # press super + right click to move focused window to another area
 
 # Configurations when hotplugging monitors
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 bspc config merge_overlapping_monitors true
-
-bspc config focus_follows_pointer true     # change focus where mouse goes
 
 # Zathura likes to always start in floating mode
 # setting rule to always start in tiled mode
