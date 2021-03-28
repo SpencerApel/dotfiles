@@ -1,4 +1,4 @@
-﻿;==========================================================
+;==========================================================
 ;
 ;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
@@ -16,57 +16,52 @@
 ;
 ;==========================================================
 
+; colors defined using .Xresources
 [colors]
-background = ${xrdb:background:#222}
-background-alt = #2d2d2d
-foreground = ${xrdb:foreground:#ffffff}
-black = ${xrdb:color0:#434758}
-red = ${xrdb:color1:#ff8b92}
-green = ${xrdb:color2:#ddffa7}
-yellow = ${xrdb:color3:#ffe585}
-blue = ${xrdb:color4:#9cc4ff}
-magenta = ${xrdb:color5:#e1acff}
-cyan = ${xrdb:color6:#a3f7ff}
-white = ${xrdb:color7:#ffffff}
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+black = ${xrdb:color0}
+red = ${xrdb:color1}
+green = ${xrdb:color2}
+yellow = ${xrdb:color3}
+blue = ${xrdb:color4}
+magenta = ${xrdb:color5}
+cyan = ${xrdb:color6}
+white = ${xrdb:color7}
 
 [bar/mybar]
-;monitor = ${env:MONITOR:eDP-1}
 wm-restack = bspwm
 enable-ipc = true
 fixed-center = false
 
 width = 100%
-height = 20 ;set to 20 so when dmenu is launched, it covers the bar
+height = 20
 offset-x = 0
 offset-y = 0
 radius = 0.0
 
-background = ${colors.background}
-foreground = ${colors.foreground}
-
 line-size = 2
-line-color = #f00
 
 padding = 0
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = UbuntuMono Nerd Font:size=10;1
-font-1 = Inconsolata Nerd Font Mono:size=10;1
-font-2 = JoyPixels:scale=12:style=Regular;2
+font-0 = UbuntuMono Nerd Font Mono:size=11;1
+font-1 = JoyPixels:scale=12:style=Regular;2
 
 modules-left = bspwm
-modules-right = pacman-pkgs xkeyboard memory cpu temperature wlan battery date
+modules-right = pacman-pkgs cpu memory temperature wlan xkeyboard battery date
 
 tray-position = right
 tray-padding = 10
-tray-background = ${colors.background-alt}
+tray-background = ${colors.background}
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
-
 cursor-click = pointer
 cursor-scroll = default
+
+screenchange-reload = true
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MODULES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -78,11 +73,10 @@ blacklist-0 = num lock
 label-layout = %layout%
 label-layout-underline = ${colors.blue}
 label-indicator-padding = 1
-label-indicator-margin = 1
+label-indicator-margin = 0
 label-indicator-background = ${colors.red}
 label-indicator-underline = ${colors.red}
-format-background = ${colors.background-alt}
-;format-padding = 1
+format-background = ${colors.background}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -107,10 +101,10 @@ label-empty-padding = 1
 [module/pacman-pkgs]
 type = custom/ipc
 hook-0 = pacman -Qu | wc -l
-;click-left = URxvt -e htop
+;click-left = $TERMINAL -e sudo pacman -Syu
 format-prefix = "📦 "
 format-underline = ${colors.yellow}
-format-background = ${colors.background-alt}
+format-background = ${colors.background}
 format-padding = 1
 initial = 1
 
@@ -120,10 +114,9 @@ initial = 1
 type = internal/cpu
 interval = 2
 format-prefix = "💻 "
-format-prefix-foreground = ${colors.blue}
 format-underline = ${colors.blue}
 label = %percentage:2%%
-format-background = ${colors.background-alt}
+format-background = ${colors.background}
 format-padding = 1
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -132,10 +125,9 @@ format-padding = 1
 type = internal/memory
 interval = 2
 format-prefix = "🧠 "
-format-prefix-foreground = ${colors.red}
-format-underline = #4bffdc
+format-underline = ${colors.magenta}
 label = %percentage_used%%
-format-background = ${colors.background-alt}
+format-background = ${colors.background}
 format-padding = 1
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -145,24 +137,16 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-format-connected-background = ${colors.background-alt}
+format-connected = <label-connected>
+format-connected-underline = ${colors.magenta}
+format-connected-background = ${colors.background}
 format-connected-padding = 1
-label-connected = %essid%
+label-connected = 📡 %essid%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.green}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.yellow}
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.red}
+label-disconnected = 📡 disconnected
+label-disconnected-foreground = ${colors.red}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -171,18 +155,12 @@ type = internal/network
 interface = enp0s31f6
 interval = 3.0
 
-format-connected-underline = #55aa55
-format-connected-background = ${colors.background-alt}
+format-connected-underline = ${colors.magenta}
+format-connected-background = ${colors.background}
 format-connected-padding = 1
-format-connected-prefix = " "
+format-connected-prefix = "🔌 "
 format-connected-prefix-foreground = ${colors.magenta}
 label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.cyan}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -191,8 +169,8 @@ type = custom/script
 interval = 30
 exec = date '+%m/%d/%Y %H:%M'
 label = %output%
-;format-prefix = "🕑 "
-format-background = ${colors.background-alt}
+format-prefix = "🕑 "
+format-background = ${colors.background}
 format-underline = ${colors.blue}
 format-padding = 1
 
@@ -206,34 +184,28 @@ full-at = 98
 
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.yellow}
-format-charging-background = ${colors.background-alt}
+format-charging-background = ${colors.background}
 format-charging-padding = 1
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${colors.red}
-format-discharging-background = ${colors.background-alt}
+format-discharging-background = ${colors.background}
 format-discharging-padding = 1
 
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.green}
 format-full-underline = ${colors.green}
-format-full-background = ${colors.background-alt}
+format-full-background = ${colors.background}
 format-full-padding = 1
 
-
-;ramp-capacity-0 = 
-;ramp-capacity-1 = 
-;ramp-capacity-2 = 
-;ramp-capacity-foreground = ${colors.red}
-
 animation-charging-0 = ⚡
-;animation-charging-1 = 🔋
+animation-charging-1 = 🔋
 animation-charging-foreground = ${colors.yellow}
 animation-charging-framerate = 750
 
 animation-discharging-0 = 
-;animation-discharging-1 = 🔋
+animation-discharging-1 = 🔋
 animation-discharging-foreground = ${colors.red}
 animation-discharging-framerate = 750
 
@@ -246,21 +218,8 @@ format-underline = ${colors.red}
 format-prefix = "🌡"
 label = %output%
 interval = 2
-format-background = ${colors.background-alt}
+format-background = ${colors.background}
 format-padding = 1
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
-
-[global/wm]
-;margin-top = 5
-;margin-bottom = 5
-
-; vim:ft=dosini
