@@ -1,41 +1,40 @@
 !----------------------------
-! Global Color Settings
+!Global Color Settings
 !----------------------------
 
 !*.font:
 !*.alpha:
 
-!*.background:
-!*.foreground:
-!*.cursorColor:
+*.background:   #141c21
+*.foreground:   #f5f5f5
 
 ! black
 *.color0:       #101010
 *.color8:       #434758
 
 ! red
-*.color1:       #f07178
-*.color9:       #ff8b92
+*.color1:       #d50000
+*.color9:       #ff5135
 
 ! green
-*.color2:       #c3e88d
-*.color10:      #ddffa7
+*.color2:       #64dd17
+*.color10:      #9cff57
 
 ! yellow
-*.color3:       #ffcb6b
-*.color11:      #ffe585
+*.color3:       #ffd600
+*.color11:      #ffff52
 
 ! blue
-*.color4:       #82aaff
-*.color12:      #9cc4ff
+*.color4:       #0d47a1
+*.color12:      #5472d3
 
 ! magenta
-*.color5:       #c792ea
-*.color13:      #e1acff
+*.color5:       #8e24aa
+*.color13:      #c158dc
 
 ! cyan
-*.color6:       #89ddff
-*.color14:      #a3f7ff
+*.color6:       #00e5ff
+*.color14:      #6effff
 
 ! white
 *.color7:       #d0d0d0
