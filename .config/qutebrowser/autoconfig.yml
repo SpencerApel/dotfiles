@@ -79,6 +79,9 @@ settings:
     global: false
   content.blocking.enabled:
     global: true
+  content.notifications:
+    https://www.reddit.com: false
+    https://www.youtube.com: false
   editor.command:
     global:
     - nvim
@@ -94,6 +97,9 @@ settings:
     global: overlay
   scrolling.smooth:
     global: true
+  spellcheck.languages:
+    global:
+    - en-US
   statusbar.position:
     global: bottom
   statusbar.widgets:
@@ -112,5 +118,10 @@ settings:
     global: multiple
   tabs.width:
     global: 15%
+  url.searchengines:
+    global:
+      DEFAULT: https://duckduckgo.com/?q={}
+      aur: https://aur.archlinux.org/packages/?O=0&K={}
+      aw: https://wiki.archlinux.org/?search={}
   window.transparent:
     global: false
