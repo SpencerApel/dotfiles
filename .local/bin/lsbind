@@ -14,4 +14,4 @@
 # will work with many other programs. Comments that do not have
 # a keybinding on the line below will also be excluded
 
-awk '/^[a-zA-Z]|{/ && last {print $0,"\t",last} {last=""} /^#/{last=$0}' ~/.config/sxhkd/sxhkdrc | column -t -s $'\t' | dmenu -l 20
+awk '/^[a-zA-Z]|{/ && last {print $0,"\t",last} {last=""} /^#/{last=$0}' ~/.config/sxhkd/sxhkdrc | column -t -s "$(printf '\t')" | dmenu -l 20
