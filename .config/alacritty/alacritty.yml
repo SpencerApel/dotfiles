@@ -59,74 +59,31 @@ colors:
     background: '#1d1f21'
     foreground: '#c5c8c6'
 
-  # Cursor colors
-  # Colors which should be used to draw the terminal cursor.
-  #
-  # Allowed values are CellForeground and CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
-  cursor:
-    text: CellBackground
-    cursor: CellForeground
-
-  # Vi mode cursor colors
-  # Colors for the cursor when the vi mode is active.
-  #
-  # Allowed values are CellForeground and CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
-  vi_mode_cursor:
-    text: CellBackground
-    cursor: CellForeground
-
-  # Selection colors
-  # Colors which should be used to draw the selection area.
-  #
-  # Allowed values are CellForeground and CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
-  selection:
-    text: CellBackground
-    background: CellForeground
-
-  # Search colors
-  # Colors used for the search bar and match highlighting.
-  search:
-    # Allowed values are CellForeground and CellBackground, which reference the
-    # affected cell, or hexadecimal colors like #ff00ff.
-    matches:
-      foreground: '#1d1f21'
-      background: '#c5c8c6'
-    focused_match:
-      foreground: CellBackground
-      background: CellForeground
-
-    bar:
-      background: '#c5c8c6'
-      foreground: '#1d1f21'
-
   # Normal colors
   normal:
     black:   '#101010'
+    red:     '#ff5135'
+    green:   '#9cff57'
+    yellow:  '#ffcb6b'
+    blue:    '#82aaff'
+    magenta: '#c792ea'
+    cyan:    '#89ddff'
+    white:   '#d0d0d0'
+
+  # Bright colors
+  bright:
+    black:   '#44475a'
     red:     '#d50000'
     green:   '#64dd17'
     yellow:  '#ffd600'
     blue:    '#0d47a1'
     magenta: '#8e24aa'
     cyan:    '#00e5ff'
-    white:   '#d0d0d0'
-
-  # Bright colors
-  bright:
-    black:   '#434758'
-    red:     '#ff5135'
-    green:   '#9cff57'
-    yellow:  '#ffff52'
-    blue:    '#5472d3'
-    magenta: '#c158dc'
-    cyan:    '#6effff'
     white:   '#ffffff'
 
   # Dim colors
   #
-  # If the dim colors are not set, they will be calculated automatically based
+  # If not set, they will be calculated automatically based
   # on the `normal` colors.
   #dim:
   #  black:   '#434758'
@@ -137,16 +94,6 @@ colors:
   #  magenta: '#e1acff'
   #  cyan:    '#bbd8cf'
   #  white:   '#dcedc1'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '#ff00ff' }`
-  #
-  #indexed_colors: []
 
 # Background opacity
 #
