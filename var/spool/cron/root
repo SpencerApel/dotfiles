@@ -1,1 +1,13 @@
+# cron jobs
+# format: min, hr, day_of_mon, mon, day_of_week, command
+# also: @reboot, @yearly, @monthly, @weekly, @daily, @hourly
+
+# Clean pacman pkg cache
+@monthly /bin/paccache -r
+
+# Remove uninstalled cached pkgs
+@monthly /bin/pacman -Sc
+
+# Update pkg database every 6 hours
+0 */6 * * * /bin/pacman -Sy
 
