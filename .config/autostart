@@ -2,7 +2,7 @@
 
 # Autostart programs
 
-pgrep -x polybar || $HOME/.config/polybar/launch.sh
+[ pgrep -x polybar && killall polybar ] || $HOME/.config/polybar/launch.sh
 pgrep -x 'sxhkd' || sxhkd &
 pgrep -x 'picom --experimental-backends -b' || picom --experimental-backends -b
 pgrep -x 'nm-applet' || nm-applet &
