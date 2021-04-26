@@ -8,9 +8,6 @@
 # Remove uninstalled cached pkgs
 @monthly /bin/pacman -Sc
 
-# Update pkg database every 6 hours
-0 */6 * * * /bin/pacman -Sy
-
 # Once a month backup explicitly installed packages
 @monthly pacman -Qqen > /home/spencer/Documents/baks/pkglist.txt
 @monthly pacman -Qqem > /home/spencer/Documents/baks/aurlist.txt
