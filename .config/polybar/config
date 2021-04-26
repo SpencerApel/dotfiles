@@ -100,7 +100,7 @@ label-empty-padding = 1
 
 [module/pacman-pkgs]
 type = custom/ipc
-hook-0 = pacman -Qu | wc -l
+hook-0 = checkupdates | wc -l
 ;click-left = $TERMINAL -e sudo pacman -Syu
 format-prefix = "📦 "
 format-underline = ${colors.yellow}
